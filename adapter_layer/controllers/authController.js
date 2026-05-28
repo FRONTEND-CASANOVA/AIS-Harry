@@ -17,3 +17,24 @@ export const registerStudent = async (req, res) => {
         });
     }
 }
+
+
+export const getStudentsInfo = async (req, res) => {
+  try {
+    const students = await AuthService.getStudents();
+
+    // const studentIds = students.map(student => student._id);
+
+    res.status(200).json({
+      success: true,
+      data: students,
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "An error occurred while fetching students.",
+    });
+  }
+};

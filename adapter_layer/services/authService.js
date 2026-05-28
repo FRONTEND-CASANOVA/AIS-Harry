@@ -7,3 +7,9 @@ export const registerStudent = async (studentProfile) => {
 
     return await AuthAdapter.create(studentProfile);
 }
+
+
+export const getStudents = async () => {
+  const students = await AuthAdapter.getStudentsProfile();
+  return students;
+};

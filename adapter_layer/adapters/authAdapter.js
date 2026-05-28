@@ -18,3 +18,18 @@ export const create = async (profile) => {
     return await response.json();
 
 }
+
+
+export const getStudentsProfile = async () => {
+  const response = await fetch(
+    "https://ais-simulated-legacy.onrender.com/api/students",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  return await response.json();
+};
