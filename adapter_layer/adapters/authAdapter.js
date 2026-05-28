@@ -7,7 +7,7 @@ export const create = async (profile) => {
         studentStatus: profile.status
     }
     const response = await fetch(
-        'https://ais-simulated-legacy-.onrender.com/api/students', 
+        'https://ais-simulated-legacy.onrender.com/api/students', 
         {
         method: "POST",
         headers: {
